@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><img src="static/image/logo2.png" alt="logo_img">
+
+      <!-- <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul> -->
+      <!-- <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a> -->
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Diabetes Prediction</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict the probability of Diabetes Occurence
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+    <form action='/predict' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="preg_name"><b>Pregnancies</b></label>
+            <br>
+          <input placeholder="Number of times pregnant" name="Pregnancies" id="preg_name" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+
+          <label for="glu_name"><b>Glucose</b></label>
+            <br>
+          <input id="glu_name" name="Glucose" placeholder="Plasma glucose concentration a 2 hours in an oral glucose tolerance test"  type="text" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="bp_name"><b>Blood Pressure</b></label>
+            <br>
+          <input id="bp_name" name="BloodPressure" placeholder="Diastolic blood pressure (mm Hg)" type="text" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+            <label for="SkinThickness_name"><b>Skin Thickness</b></label>
+            <br>
+          <input id="SkinThickness_name" name="SkinThickness" placeholder="Triceps skin fold thickness (mm)" type="text" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+            <label for="Insulin_name"><b>Insulin</b></label>
+            <br>
+          <input id="Insulin_name" name="Insulin" placeholder="2-Hour serum insulin (mu U/ml)" type="text" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+            <label for="BMI_name"><b>BMI</b></label>
+            <br>
+          <input id="BMI_name" name="BMI" placeholder="Body mass index weight(kg)/height(m)^2)" type="text" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+            <label for="DiabetesPedigree_name"><b>Diabetes Pedigree Function</b></label>
+            <br>
+          <input id="DiabetesPedigree_name" name="DiabetesPedigree" placeholder="Diabetes pedigree function" type="text" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+            <label for="Age_name"><b>Age</b></label>
+            <br>
+          <input id="Age_name" name="Age" placeholder="Age (years)" type="text" class="validate">
+
+        </div>
+
+
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Probability</button>
+      </div>
+    </form>
+      </div>
+
+      <br>
+        {{pred}}<br>
+
+    </div>
+  </div>
+
+
+    <br><br>
+
+
+  <footer class="page-footer orange">
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+    <!-- <div class="footer-copyright"> -->
+      <div class="container">
+      Made with 💗 by <a class="red-text " href="https://www.linkedin.com/in/shrish-sharma-353b07195?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B2ymhNSeJSJO%2BHC8QdpEMwA%3D%3D"><b><u>Shrish</u></b></a>
+      </div>
+    <!-- </div> -->
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
